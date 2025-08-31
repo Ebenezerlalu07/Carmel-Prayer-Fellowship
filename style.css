@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #b71c1c;
+    color: #fff !important;
+    border-radius: 25px;
+    padding: 6px 18px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('/Assets/Banner.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 70px;
+    width: 100%;
+}
+
+.hero-buttons .btn {
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 25px;
+}
+
+.btn-danger {
+    background-color: #b71c1c;
+    border: none;
+}
+
+.stat-item {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.stat-item h4 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .stat-item {
+        text-align: left;
+        margin: 10px 20px 10px 0;
+    }
+
+    .stat-item h4 {
+        font-size: 20px;
+    }
+
+    .stats-wrapper {
+        justify-content: flex-start !important;
+    }
+}
+
+.custom-img {
+
+    width: 100%;
+    height: 300px;
+    /* equal height */
+    object-fit: cover;
+    /* crop nicely */
+    border-radius: 15px;
+    /* rounded corners */
+}
+
+/* Bootstrap-friendly equal height */
+.equal-img {
+    width: 100%;
+    height: 250px;
+    /* same height for all images */
+    object-fit: cover;
+    /* crop to fit nicely */
+}
+
