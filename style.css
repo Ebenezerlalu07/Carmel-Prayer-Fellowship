@@ -31,6 +31,14 @@
         padding: 40px 0;
     }
 
+    /* Remove border and background from hamburger button */
+    .navbar-toggler {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+
     .hero h1 {
         font-size: 2.5rem;
         font-weight: bold;
