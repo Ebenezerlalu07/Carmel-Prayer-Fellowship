@@ -1,105 +1,99 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* Navbar */
-.navbar-nav .nav-link {
-    font-weight: 500;
-    margin-left: 1rem;
-}
-
-.navbar-nav .nav-link.active {
-    background-color: #b71c1c;
-    color: #fff !important;
-    border-radius: 25px;
-    padding: 6px 18px;
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('/Assets/Banner.jpg') no-repeat center center/cover;
-    min-height: 100vh;
-    color: white;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-}
-
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.55);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding-bottom: 70px;
-    width: 100%;
-}
-
-.hero-buttons .btn {
-    font-weight: bold;
-    padding: 10px 22px;
-    border-radius: 25px;
-}
-
-.btn-danger {
-    background-color: #b71c1c;
-    border: none;
-}
-
-.stat-item {
-    text-align: center;
-    margin-left: 30px;
-}
-
-.stat-item h4 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.stat-item p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 767px) {
-    .stat-item {
-        text-align: left;
-        margin: 10px 20px 10px 0;
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
     }
 
-    .stat-item h4 {
-        font-size: 20px;
+    .hero {
+        position: relative;
+        background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        color: white;
     }
 
-    .stats-wrapper {
-        justify-content: flex-start !important;
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.35);
     }
-}
 
-.custom-img {
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 40px 0;
+    }
 
-    width: 100%;
-    height: 300px;
-    /* equal height */
-    object-fit: cover;
-    /* crop nicely */
-    border-radius: 15px;
-    /* rounded corners */
-}
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
 
-/* Bootstrap-friendly equal height */
-.equal-img {
-    width: 100%;
-    height: 250px;
-    /* same height for all images */
-    object-fit: cover;
-    /* crop to fit nicely */
-}
+    .hero p {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
 
+    .btn-custom {
+        border-radius: 50px !important;
+        /* pill shape */
+        padding: 12px 32px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+
+    .stats {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+
+    .stats h4 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .navbar {
+        background-color: #fff !important;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        padding: 6px 15px !important;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+        background-color: #b22222 !important;
+        color: #fff !important;
+    }
+
+    /* More spacing in mobile navbar */
+    @media (max-width: 992px) {
+        .navbar-nav .nav-item {
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .action-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .stats {
+            text-align: left !important;
+        }
+    }

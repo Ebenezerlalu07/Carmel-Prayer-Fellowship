@@ -2,254 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carmel Prayer Fellowship</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+    /* Mobile navbar improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .navbar-nav .nav-link {
+        text-align: left;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link.active {
+        background: #dc3545;
+        color: #fff !important;
+        border-radius: 25px;
+        font-weight: 600;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background: #f8f9fa;
+      }
+
+      /* Mobile: stack buttons + stats left */
+      .action-row {
+        flex-direction: column;
+        align-items: flex-start !important;
+      }
+
+      .stats {
+        text-align: left !important;
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-danger" href="#">
-                <img src="/Assets/Logo.webp" alt="Logo" height="60" class="me-2">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section class="hero-section bg-dark py-5">
-        <div class="container text-white hero-content">
-            <div class="row align-items-end">
-                <!-- Left content -->
-                <div class="col-lg-8">
-                    <p class="fw-semibold">Welcome to Carmel Prayer Fellowship</p>
-                    <h1 class="display-5 fw-bold">Rooted in the Gospel, growing in grace, living in love.</h1>
-                    <p class="lead mt-3">Discover a place where the Gospel leads, and everyone belongs.</p>
-                    <div class="hero-buttons mt-4">
-                        <a href="#" class="btn btn-danger me-3">Visit Church</a>
-                        <a href="#" class="btn btn-light">Watch Live</a>
-                    </div>
-                </div>
-
-                <!-- Right aligned stats -->
-                <div class="col-lg-4 d-flex justify-content-lg-end mt-5 mt-lg-0">
-                    <div class="d-flex flex-wrap stats-wrapper text-center">
-                        <div class="stat-item me-4">
-                            <h4 class="counter" data-target="1995">0</h4>
-                            <p>Founded</p>
-                        </div>
-                        <div class="stat-item me-4">
-                            <h4 class="counter" data-target="240">0</h4>
-                            <p>Members</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4 class="counter" data-target="24" data-suffix="/7">0</h4>
-                            <p>Prayer Support</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Counter Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const counters = document.querySelectorAll(".counter");
-
-            counters.forEach(counter => {
-                const target = +counter.getAttribute("data-target");
-                const suffix = counter.getAttribute("data-suffix") || "";
-                const speed = 200; // smaller = faster
-
-                const updateCount = () => {
-                    const current = +counter.innerText;
-                    const increment = Math.ceil(target / speed);
-
-                    if (current < target) {
-                        counter.innerText = current + increment;
-                        setTimeout(updateCount, 30);
-                    } else {
-                        counter.innerText = target + suffix;
-                    }
-                };
-
-                updateCount();
-            });
-        });
-    </script>
-
-
-
-    <div class=" Welcome to Our Church container py-5">
-        <!-- Section Header -->
-        <div class="text-center text-md-start mb-5">
-            <h2 class="fw-bold mb-3">Welcome to Our Church</h2>
-            <p class="fs-5 text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                It has survived not only five centuries, but also the leap into electronic typesetting.
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-            </p>
-        </div>
-
-        <!-- Responsive Bootstrap Grid -->
-        <div class="row g-0"> <!-- removed gutter spacing -->
-
-            <!-- First Image (60%) -->
-            <div class="col-12 col-md-6 image-col pe-md-2 pb-2 pb-md-0">
-                <img src="/Assets/people-visiting-praying-church-building.jpg" alt="Church" class="custom-img shadow">
-            </div>
-
-            <!-- Second Image (20%) -->
-            <div class="col-6 col-md-3 image-col px-md-1 pb-2 pb-md-0">
-                <img src="/Assets/7787.jpg" alt="Child Praying" class="custom-img shadow">
-            </div>
-
-            <!-- Third Image (20%) -->
-            <div class="col-6 col-md-3 image-col ps-md-2">
-                <img src="/Assets/2099.jpg" alt="Woman Praying" class="custom-img shadow">
-            </div>
-
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/Assets/Logo.webp" alt="Logo" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero d-flex flex-column justify-content-end text-white" 
+  style="min-height:100vh; padding-top:80px; 
+         background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
+         position: relative;">
 
+  <!-- Dark overlay for readability -->
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
 
+  <div class="container position-relative">
+    <div class="hero-content">
+      <p class="fw-bold">Welcome to Carmel Prayer Fellowship</p>
+      <h1>Rooted in the Gospel, growing in<br> grace, living in love.</h1>
+      <p>Discover a place where the Gospel leads, and everyone belongs.</p>
 
-    <div class="Our Church Events">
-        <section class="py-5 text-center text-white"
-            style="background: url('Assets/Red\ banner.png') center/cover no-repeat;">
-            <div class="container">
-                <h2 class="fw-bold mb-2">Our Church Events</h2>
-                <p class="mb-5">Pastor Robin C Roy will be attending all these meetings</p>
-
-                <div class="row g-4">
-                    <!-- Card 1 -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <img src="/Assets/19703.jpg" class="card-img-top img-fluid" alt="Event 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Gospel Praise & Worship</h5>
-                                <p class="card-text">Starts at 10.30 AM Vineyard Church, 5015 Grove W Blvd 2nd
-                                    Floor, Stafford, TX 77477</p>
-                                <p class="card-text">We will be live streaming our services on YouTube. Please
-                                    follow us at Carmel Prayer Fellowship.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <img src="/Assets/2151103930.jpg" class="card-img-top img-fluid" alt="Event 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Every Friday</h5>
-                                <p class="card-text">Evening Prayer at 7.30 PM at 4614 Sundown Court, Missouri City
-                                </p>
-                                <p class="card-text">Come together to seek God’s presence, share in worship, and
-                                    lift up one another in prayer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <img src="/Assets/516 (1).jpg" class="card-img-top img-fluid" alt="Event 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Ladies Prayer</h5>
-                                <p class="card-text">Every other Saturday at 7.30 PM</p>
-                                <p class="card-text">This gathering is a wonderful opportunity to come together in
-                                    faith, strengthen our spiritual journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <img src="/Assets/2150062127.jpg" class="card-img-top img-fluid" alt="Event 4">
-                            <div class="card-body">
-                                <h5 class="card-title">Set Apart Youth</h5>
-                                <p class="card-text">Set Apart Youth is the youth ministry of Carmel Prayer
-                                    Fellowship, empowering the next generation to live Christ-centered lives.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="mt-5 fst-italic">
-                    “May the God of hope fill you with all joy and peace as you trust in him,
-                    so that you may overflow with hope by the power of the Holy Spirit.”
-                </p>
-            </div>
-        </section>
-    </div>
-
-
-    <div class="Contact container py-5">
-        <div class="row g-5 align-items-center">
-            <!-- Left: Contact Form -->
-            <div class="col-12 col-lg-6">
-                <h2 class="fw-bold mb-4">Get in Contact!</h2>
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">Name</label>
-                        <input type="text" class="form-control border-0 border-bottom rounded-0 shadow-none">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control border-0 border-bottom rounded-0 shadow-none">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">Message</label>
-                        <textarea class="form-control border-0 border-bottom rounded-0 shadow-none" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-danger w-100 py-2 fw-bold rounded-pill">Submit</button>
-                </form>
-            </div>
-
-            <!-- Right: Contact Info -->
-            <div class="col-12 col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center">
-                    <h2 class="fw-bold mb-3">Better yet, see us in person!</h2>
-                    <p class="fw-semibold mb-1">We love get in contact with you</p>
-                    <h3 class="text-danger fw-bold mb-3">Carmel Prayer Fellowship</h3>
-                    <p class="mb-1">4614 Sundown Court, Missouri City, Texas 77459,</p>
-                    <p class="mb-0">
-                        United States,
-                        <a href="tel:+13464337294" class="text-dark fw-semibold">(346) 433-7294</a>
-                    </p>
-                </div>
-            </div>
+      <!-- Action row (buttons + stats) -->
+      <div class="action-row d-flex justify-content-between align-items-center flex-wrap mt-4">
+        <!-- Buttons -->
+        <div class="mb-3 mb-lg-0">
+          <a href="#" class="btn btn-danger btn-custom rounded-pill me-2">Visit Church</a>
+          <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
         </div>
+
+        <!-- Stats -->
+        <div class="stats d-flex gap-4 text-end">
+          <div>
+            <h4>1995</h4>
+            <p class="mb-0">Founded</p>
+          </div>
+          <div>
+            <h4>240</h4>
+            <p class="mb-0">Members</p>
+          </div>
+          <div>
+            <h4>24/7</h4>
+            <p class="mb-0">Prayer Support</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
 
-
-
-
-
-
-
-
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
