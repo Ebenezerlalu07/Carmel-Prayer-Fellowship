@@ -19,7 +19,7 @@
         transition: linear;
         animation: ease;
       }
-      
+
 
       .navbar-nav .nav-link {
         text-align: left;
@@ -49,6 +49,7 @@
         text-align: left !important;
         margin-top: 1rem;
       }
+
     }
   </style>
 </head>
@@ -77,48 +78,98 @@
   </nav>
 
 
-<!-- Hero Section -->
-<section class="hero d-flex flex-column justify-content-end text-white" 
-  style="min-height:100vh; padding-top:80px; 
+  <!-- Hero Section -->
+  <section class="hero d-flex flex-column justify-content-end text-white" style="min-height:100vh; padding-top:80px; 
          background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
          position: relative;">
 
-  <!-- Dark overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+    <!-- Dark overlay for readability -->
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
 
-  <div class="container position-relative">
-    <div class="hero-content">
-      <p class="fw-bold">Welcome to Carmel Prayer Fellowship</p>
-      <h1>Rooted in the Gospel, growing in<br> grace, living in love.</h1>
-      <p>Discover a place where the Gospel leads, and everyone belongs.</p>
+    <div class="container position-relative">
+      <div class="hero-content">
+        <p class="fw-bold">Welcome to Carmel Prayer Fellowship</p>
+        <h1>Rooted in the Gospel, growing in<br> grace, living in love.</h1>
+        <p>Discover a place where the Gospel leads, and everyone belongs.</p>
 
-      <!-- Action row (buttons + stats) -->
-      <div class="action-row d-flex justify-content-between align-items-center flex-wrap mt-4">
-        <!-- Buttons -->
-        <div class="mb-3 mb-lg-0">
-          <a href="#" class="btn btn-danger btn-custom rounded-pill me-2">Visit Church</a>
-          <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats d-flex gap-4 text-end">
-          <div>
-            <h4>1995</h4>
-            <p class="mb-0">Founded</p>
+        <!-- Action row (buttons + stats) -->
+        <div class="action-row d-flex justify-content-between align-items-center flex-wrap mt-4">
+          <!-- Buttons -->
+          <div class="mb-3 mb-lg-0">
+            <a href="#" class="btn btn-danger btn-custom rounded-pill me-2">Visit Church</a>
+            <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
           </div>
-          <div>
-            <h4>240</h4>
-            <p class="mb-0">Members</p>
-          </div>
-          <div>
-            <h4>24/7</h4>
-            <p class="mb-0">Prayer Support</p>
+
+          <!-- Stats -->
+          <div class="stats d-flex gap-4 text-end">
+            <div>
+              <h4>1995</h4>
+              <p class="mb-0">Founded</p>
+            </div>
+            <div>
+              <h4>240</h4>
+              <p class="mb-0">Members</p>
+            </div>
+            <div>
+              <h4>24/7</h4>
+              <p class="mb-0">Prayer Support</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Welcome Section -->
+<section class="container my-5">
+  <div class="mb-4">
+    <h1 class="fw-bold">Welcome to Our Church</h1>
+  </div>
+
+  <!-- Paragraph -->
+  <div class="mb-5">
+    <p class="mx-auto">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+      like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>
+
+  <!-- Images with equal height -->
+  <div class="row g-4 align-items-stretch">
+    <!-- 60% -->
+    <div class="col-12 col-md-7 d-flex">
+      <img src="/Assets/people-visiting-praying-church-building.jpg" alt="Church Image 1"
+        class="img-fluid rounded-4 w-100 object-fit-cover">
+    </div>
+
+    <!-- 25% -->
+    <div class="col-6 col-md-3 d-flex">
+      <img src="/Assets/7787.jpg" alt="Church Image 2"
+        class="img-fluid rounded-4 w-100 object-fit-cover">
+    </div>
+
+    <!-- 15% -->
+    <div class="col-6 col-md-2 d-flex">
+      <img src="/Assets/2099.jpg" alt="Church Image 3"
+        class="img-fluid rounded-4 w-100 object-fit-cover">
+    </div>
   </div>
 </section>
+
+<style>
+  /* Force equal height for all images in row */
+  .row.align-items-stretch img {
+    height: 100%;
+  }
+</style>
+
+
+
 
 
   <!-- Bootstrap JS -->
