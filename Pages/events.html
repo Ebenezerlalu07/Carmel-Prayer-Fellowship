@@ -29,8 +29,8 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link active" href="/Pages/about.html">About</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/events.html">Events</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link " href="/Pages/about.html">About</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link active" href="/Pages/events.html">Events</a></li>
                     <li class="nav-item ms-2"><a class="nav-link" href="#">Videos</a></li>
                     <li class="nav-item ms-2"><a class="nav-link" href="#">Gallery</a></li>
                 </ul>
@@ -42,7 +42,7 @@
 
     <!-- Banner Section -->
     <section class="position-relative text-white"
-        style="height: 50vh; background: url('/Assets/Banner.jpg') no-repeat center center / cover;">
+        style="height: 50vh; background: url('/Assets/Events.jpg') no-repeat center center / cover;">
         <!-- Dark overlay -->
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5); z-index: 1;">
         </div>
@@ -52,7 +52,7 @@
             <!-- ===== Typing Quote (No Cursor) ===== -->
             <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
                 <h1 class="fw-medium display-5 mb-0 qoutes">
-                    “Rooted in the Gospel, growing in<br> faith, living in love”
+                    "Faith, fellowship, and community<br>through every event."
                 </h1>
             </div>
 
@@ -108,7 +108,7 @@
             <!-- About Text Absolutely Positioned to Right Edge -->
             <div class="position-absolute bottom-0" style="right: 10px;">
                 <p class="p">
-                    <a href="#about" class="btn btn-link text-white fw-bold fs-4 text-decoration-none">About</a>
+                    <a href="#about" class="btn btn-link text-white fw-bold fs-4 text-decoration-none">Events</a>
                 </p>
             </div>
         </div>
@@ -116,238 +116,193 @@
 
 
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-    <section class="container my-5 ">
-        <div class="mb-4 text-md-start">
-            <h1 class="fw-bold">Our Church Our story</h1>
-        </div>
-
-        <!-- Paragraph -->
-        <div class="mb-5">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
-                has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                versions of Lorem Ipsum.<br><br>
-
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five
-                enturies, but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                PageMaker including versions of Lorem.
-            </p>
-        </div>
-    </section>
-
-
-
-    <section class="history-section py-4 fade-in-element">
-        <div class="history-box text-white">
-            <div class="container py-4 d-flex flex-column flex-lg-row align-items-center justify-content-between">
-
-                <!-- Left: Year + Text -->
-                <div
-                    class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start text-center text-lg-start mb-4 mb-lg-0 w-100">
-
-                    <!-- Year -->
-                    <div class="year-box mb-3 mb-lg-0 me-lg-4 border-end pe-lg-4">
-                        <h3 class="fw-bold mb-0">1995</h3>
-                        <small class="d-block">founded</small>
-                    </div>
-
-                    <!-- Text -->
-                    <div class="ms-lg-4 px-3 px-lg-0">
-                        <p class="mb-0">
-                            “Founded in 1995, our organization has been committed to serving the community
-                            with dedication and purpose, growing steadily while staying true to our values and vision.”
-                        </p>
-                    </div>
-
-                </div>
-
-                <!-- Right: Logo -->
-                <div class="text-center text-lg-end">
-                    <img src="/Assets/Logo white.png" alt="Carmel Prayer Fellowship" class="img-fluid"
-                        style="max-height: 80px;">
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-    <style>
-        .history-box {
-            position: relative;
-            overflow: hidden;
-            background-color: #aa1b1e;
-        }
-
-        .history-box::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #aa1b1e;
-            clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
-            z-index: -1;
-        }
-
-        /* ✅ Mobile responsiveness */
-        @media (max-width: 991.98px) {
-            .history-box::before {
-                clip-path: none;
-                /* remove angle */
-            }
-
-            .border-end {
-                border: none !important;
-                padding-right: 0 !important;
-            }
-
-            .ms-lg-4,
-            .me-lg-4,
-            .pe-lg-4 {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding-right: 0 !important;
-            }
-
-            .history-section .container {
-                text-align: center;
-            }
-
-            .history-section p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-
-            .history-section img {
-                margin-top: 1rem;
-            }
-        }
-    </style>
-
-
-
-    <section class="pastor-section py-2 fade-in-element">
+    <section class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Pastor Image -->
-                <div class="col-12 col-md-5 col-lg-4 mb-4 mb-md-0 text-center">
-                    <img src="/Assets/84226.jpg" alt="Senior Pastor"
-                        class="img-fluid rounded-3 shadow w-100 h-100 object-fit-cover">
-                </div>
-
-                <!-- Pastor Text -->
-                <div class="col-12 col-md-7 col-lg-8">
-                    <h2 class="fw-bold mb-3 text-md-start">Our Senior Pastor</h2>
-                    <p class=" text-md-start">
-                        Pastor <strong>Robin C Roy</strong> is the Senior Pastor of [Your Church Name].
-                        Robin gave his life to Christ at the age of 24 and has been faithfully serving in
-                        ministry for over 20 years. For 12 of those years, he was the Founding Pastor of
-                        Grace Fellowship Church in Dallas, Texas.
-                    </p>
-                    <p class=" text-md-start">
-                        Under his leadership, what began as a small Bible study of just 20 people grew into a
-                        thriving community of more than 10,000 weekly attendees across multiple campuses,
-                        including outreach campuses in local correctional facilities through a partnership with
-                        Prison Fellowship Ministries.
-                    </p>
-                    <p class=" text-md-start">
-                        Robin is a devoted husband to Anna and a proud father of Ethan, Leah, Samuel, and Caleb.
-                        He’s passionate about soccer, enjoys far too much ice cream late at night, finds peace
-                        in gardening, and could happily eat Italian food every single day. He’s also a lifelong
-                        supporter of the Dallas Cowboys.
-                    </p>
-                </div>
-
+            <!-- Header -->
+            <div class=" mb-5">
+                <h2 class="fw-bold">Our Church Events</h2>
+                <p class="fw-semibold">Pastor Robin C Roy will be attending all these meetings</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Extra CSS for consistency -->
-    <style>
-        .object-fit-cover {
-            object-fit: cover;
-        }
-    </style>
-
-
-    <section class="pastors-section py-5 fade-in-element">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Our Senior Pastors</h2>
-            <div class="row g-4">
-
+            <!-- First Cards Grid -->
+            <div class="row g-4 mb-5">
                 <!-- Card 1 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card shadow-sm border-0 h-100 rounded-4">
-                        <img src="/Assets/2149366619.jpg" class="card-img-top rounded-top-4" alt="Jhones Samuvel">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Worship.jpg" class="card-img-top" alt="Gospel Praise & Worship" />
                         <div class="card-body">
-                            <h5 class="fw-bold mb-1">Jhone Samuvel</h5>
-                            <p class="mb-0 text-muted">Senior Pastor</p>
-                            <p class="mb-0 text-muted">Management Team Member</p>
+                            <h5 class="card-title fw-bold">Gospel Praise & Worship</h5>
+                            <p class="card-text mb-1">
+                                Starts at 10.30 AM Vineyard Church,<br>
+                                5015 Grove W Blvd 2nd Floor,<br>
+                                Stafford, TX 77477
+                            </p>
+                            <p class="card-text">
+                                We will be live streaming our services on YouTube. Please follow us at Carmel Prayer
+                                Fellowship.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card shadow-sm border-0 h-100 rounded-4">
-                        <img src="/Assets/276 (1).jpg" class="card-img-top rounded-top-4" alt="George Jacob">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Friday pryr.jpg" class="card-img-top" alt="Every Friday" />
                         <div class="card-body">
-                            <h5 class="fw-bold mb-1">George Jacob</h5>
-                            <p class="mb-0 text-muted">Executive Pastor</p>
-                            <p class="mb-0 text-muted">Management Team Member</p>
+                            <h5 class="card-title fw-bold">Every Friday</h5>
+                            <p class="card-text mb-1">
+                                Evening Prayer at 7.30 PM at 4614 Sundown Court, Missouri City
+                            </p>
+                            <p class="card-text">
+                                Come together to seek God’s presence, share in worship, and lift up one another in
+                                prayer.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card shadow-sm border-0 h-100 rounded-4">
-                        <img src="/Assets/2149305397.jpg" class="card-img-top rounded-top-4" alt="Jane Alies">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Ladies meeting.jpg" class="card-img-top" alt="Ladies Prayer" />
                         <div class="card-body">
-                            <h5 class="fw-bold mb-1">Jane Alies</h5>
-                            <p class="mb-0 text-muted">Executive Pastor of Ministries</p>
-                            <p class="mb-0 text-muted">Management Team Member</p>
+                            <h5 class="card-title fw-bold">Ladies Prayer</h5>
+                            <p class="card-text mb-1">
+                                Every other Saturday at 7.30 PM
+                            </p>
+                            <p class="card-text">
+                                This gathering is a wonderful opportunity to come together in faith, strengthen our
+                                spiritual journey.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card shadow-sm border-0 h-100 rounded-4">
-                        <img src="/Assets/14884.jpg" class="card-img-top rounded-top-4" alt="Glory Rose">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Youth.jpg" class="card-img-top" alt="Set Apart Youth" />
                         <div class="card-body">
-                            <h5 class="fw-bold mb-1">Glory Rose</h5>
-                            <p class="mb-0 text-muted">Global Children's Pastor & Guest</p>
-                            <p class="mb-0 text-muted">Connections Pastor</p>
+                            <h5 class="card-title fw-bold">Set Apart Youth</h5>
+                            <p class="card-text mb-1">
+                                Set Apart Youth is the youth ministry of Carmel Prayer Fellowship,
+                            </p>
+                            <p class="card-text">
+                                Empowering the next generation to live Christ-centered lives and be “set apart” for
+                                God’s purpose.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Cards Grid (duplicate of the first) -->
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Worship.jpg" class="card-img-top" alt="Gospel Praise & Worship" />
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Gospel Praise & Worship</h5>
+                            <p class="card-text mb-1">
+                                Starts at 10.30 AM Vineyard Church,<br>
+                                5015 Grove W Blvd 2nd Floor,<br>
+                                Stafford, TX 77477
+                            </p>
+                            <p class="card-text">
+                                We will be live streaming our services on YouTube. Please follow us at Carmel Prayer
+                                Fellowship.
+                            </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Friday pryr.jpg" class="card-img-top" alt="Every Friday" />
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Every Friday</h5>
+                            <p class="card-text mb-1">
+                                Evening Prayer at 7.30 PM at 4614 Sundown Court, Missouri City
+                            </p>
+                            <p class="card-text">
+                                Come together to seek God’s presence, share in worship, and lift up one another in
+                                prayer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Ladies meeting.jpg" class="card-img-top" alt="Ladies Prayer" />
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ladies Prayer</h5>
+                            <p class="card-text mb-1">
+                                Every other Saturday at 7.30 PM
+                            </p>
+                            <p class="card-text">
+                                This gathering is a wonderful opportunity to come together in faith, strengthen our
+                                spiritual journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/Assets/Youth.jpg" class="card-img-top" alt="Set Apart Youth" />
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Set Apart Youth</h5>
+                            <p class="card-text mb-1">
+                                Set Apart Youth is the youth ministry of Carmel Prayer Fellowship,
+                            </p>
+                            <p class="card-text">
+                                Empowering the next generation to live Christ-centered lives and be “set apart” for
+                                God’s purpose.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- CSS -->
     <style>
+        .card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform;
+            border-radius: 0.5rem;
+            background-color: #fff;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
         .card-img-top {
-            height: 280px;
-            /* fixed image height */
+            height: 180px;
+            width: 100%;
             object-fit: cover;
-            /* keep aspect ratio */
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
         }
     </style>
+
+
+
 
 
 
