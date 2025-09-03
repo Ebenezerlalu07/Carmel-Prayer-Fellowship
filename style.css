@@ -85,6 +85,7 @@ p {
 .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
+
 }
 
 .nav-link {
@@ -104,24 +105,25 @@ p {
     /* keeps edges curved */
 }
 
-/* === Mobile Navbar Enhancements === */
 @media (max-width: 991px) {
     .navbar-collaps {
         background: #fff;
         padding: 1rem;
         margin-top: 2rem;
         border-radius: 12px;
-        gap: 10;
-        /* smooth open/close */
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        gap: 1.5rem;
+        /* space between logo and fields */
     }
 
     .navbar-collapse .navbar-nav {
         display: flex;
         gap: 12px;
-            flex-direction: column;
+        flex-direction: column;
         /* adjust gap as needed */
     }
-
 
     /* Mobile nav links */
     .navbar-nav {
@@ -151,6 +153,7 @@ p {
         border-radius: 20px;
     }
 }
+
 
 
 
