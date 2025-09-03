@@ -41,28 +41,33 @@
 
   <!-- Hero Section -->
   <section class="hero d-flex flex-column justify-content-end text-white" style="min-height:100vh; padding-top:80px; 
-       background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
-       position: relative;   font-family: 'Playfair Display', serif;">
+         background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
+         position: relative; font-family: 'Playfair Display', serif;">
 
-    <!-- Dark overlay for readability -->
+    <!-- Dark overlay -->
     <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
 
     <div class="container position-relative">
       <div class="hero-content">
-        <p class="fw-bold">Welcome to Carmel Prayer Fellowship</p>
-        <h1>Rooted in the Gospel, growing in<br> grace, living in love.</h1>
-        <p>Discover a place where the Gospel leads, and everyone belongs.</p>
+        <p class="fw-bold text-start text-md-start">Welcome to Carmel Prayer Fellowship</p>
+        <h1 class="text-start text-md-start">Rooted in the Gospel, growing in<br> grace, living in love.</h1>
+        <p class="text-start text-md-start">Discover a place where the Gospel leads, and everyone belongs.</p>
 
-        <!-- Action row (buttons + stats) -->
-        <div class="action-row d-flex justify-content-between align-items-center flex-wrap mt-4">
+        <!-- Action row -->
+        <div class="action-row d-flex flex-column flex-md-row justify-content-md-between align-items-md-center mt-4">
+
           <!-- Buttons -->
-          <div class="mb-3 mb-lg-0">
-            <a href="#" class="btn btn-danger btn-custom rounded-pill me-2">Visit Church</a>
+          <div class="mb-3 mb-md-0 text-start">
+            <a href="#" class="btn rounded-pill me-2"
+              style="background-color:#a71212; border-color:#a71212; color:#fff;">
+              Visit Church
+            </a>
+
             <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
           </div>
 
           <!-- Stats -->
-          <div class="stats d-flex gap-4 text-end">
+          <div class="stats d-flex gap-4 text-start text-md-end flex-wrap">
             <div>
               <h4 id="counter-founded">0</h4>
               <p class="mb-0">Founded</p>
@@ -97,13 +102,14 @@
       }
 
       document.addEventListener('DOMContentLoaded', () => {
-        const duration = 700; // animation duration in ms
+        const duration = 700;
         animateValue("counter-founded", 0, 1995, duration);
         animateValue("counter-members", 0, 240, duration);
         animateValue("counter-prayer", 0, 24, duration);
       });
     </script>
   </section>
+
 
 
   <!-- Welcome Section -->
