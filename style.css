@@ -106,23 +106,21 @@ p {
 }
 
 @media (max-width: 991px) {
-    .navbar-collaps {
+    .navbar-collapse {
         background: #fff;
         padding: 1rem;
         margin-top: 2rem;
+        /* Adds gap between logo and nav links */
         border-radius: 12px;
-        display: flex;
         flex-direction: column;
-        /* stack vertically */
         gap: 1.5rem;
-        /* space between logo and fields */
     }
 
     .navbar-collapse .navbar-nav {
         display: flex;
         gap: 12px;
         flex-direction: column;
-        /* adjust gap as needed */
+
     }
 
     /* Mobile nav links */
