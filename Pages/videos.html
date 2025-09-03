@@ -46,12 +46,12 @@
                 <div class="position-relative overflow-hidden rounded-4" style="height: 600px; border-radius: 1rem;">
                     <!-- Background Image -->
                     <img src="/Assets/Live.jpg" alt="Worship Live" class="w-100 h-100 object-fit-cover"
-                        style="object-position: center; border-radius: 2rem;">
+                        style="object-position: center; border-radius: 1rem;">
 
                     <!-- Overlay Text -->
                     <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3">
-                        <h1 class="fw-bold mb-1" style="font-size: 6rem;">Worship Live</h1>
-                        <h4 class="fw-semibold mb-1" style="font-size: 2rem;">Every Sunday 10Am</h4>
+                        <h1 class="fw-bold mb-1" style="font-size: 5rem;">Worship Live</h1>
+                        <h4 class="fw-semibold mb-1" style="font-size: 1rem;">Every Sunday 10Am</h4>
                         <img src="/Assets/youtube (2).png" alt="YouTube" style="width: 50px; height: 50px;">
                     </div>
                 </div>
@@ -60,20 +60,44 @@
     </div>
 
     <style>
+        .worship-container {
+            border-radius: 1rem;
+            /* desktop curve */
+        }
+
+        .worship-image {
+            border-radius: 2rem;
+            /* desktop curve for image */
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 576px) {
+            .worship-container {
+                border-radius: 0.3rem;
+                /* reduce curve on small devices */
+            }
+
+            .worship-image {
+                border-radius: 0.3rem;
+                /* match container curve */
+            }
+
             .worship-title {
-                font-size: 2.5rem;
+                font-size: 2.5rem !important;
+                /* override inline style */
             }
 
             .worship-subtitle {
-                font-size: 1.2rem;
+                font-size: 1.2rem !important;
+                /* override inline style */
             }
 
             .youtube-icon {
-                width: 35px;
-                height: 35px;
+                width: 35px !important;
+                height: 35px !important;
             }
         }
+        
     </style>
 
 
