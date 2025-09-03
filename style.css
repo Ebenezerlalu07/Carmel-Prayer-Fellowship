@@ -103,7 +103,8 @@ html {
     transition: 0.3s;
 }
 
-.nav-link.active {
+.nav-link.active,
+.nav-link:hover {
     background-color: #b22222 !important;
     color: #fff !important;
 }
@@ -241,3 +242,6 @@ html {
 .youtube-icon:hover {
     transform: scale(1.1);
 }
+
+
+
