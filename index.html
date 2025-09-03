@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Carmel Prayer Fellowship</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/Logo.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +41,7 @@
 
 
   <!-- Hero Section -->
-  <section class="hero d-flex flex-column justify-content-end text-white" style="min-height:100vh; padding-top:80px; 
+  <section class=" fade-in-element hero d-flex flex-column justify-content-end text-white" style="min-height:100vh; padding-top:80px; 
          background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
          position: relative; font-family: 'Playfair Display', serif;">
 
@@ -67,7 +68,7 @@
           </div>
 
           <!-- Stats -->
-          <div class="stats d-flex gap-4 text-start text-md-end flex-wrap">
+          <div class="stats d-flex gap-4 flex-wrap justify-content-center text-center">
             <div>
               <h4 id="counter-founded">0</h4>
               <p class="mb-0">Founded</p>
@@ -81,45 +82,43 @@
               <p class="mb-0">Prayer Support</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <script>
-      function animateValue(id, start, end, duration) {
-        const obj = document.getElementById(id);
-        let startTimestamp = null;
-        const step = (timestamp) => {
-          if (!startTimestamp) startTimestamp = timestamp;
-          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          const value = Math.floor(progress * (end - start) + start);
-          obj.textContent = value;
-          if (progress < 1) {
-            window.requestAnimationFrame(step);
-          }
-        };
-        window.requestAnimationFrame(step);
-      }
+          <script>
+            function animateValue(id, start, end, duration) {
+              const obj = document.getElementById(id);
+              let startTimestamp = null;
+              const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.textContent = value;
+                if (progress < 1) {
+                  window.requestAnimationFrame(step);
+                }
+              };
+              window.requestAnimationFrame(step);
+            }
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const duration = 700;
-        animateValue("counter-founded", 0, 1995, duration);
-        animateValue("counter-members", 0, 240, duration);
-        animateValue("counter-prayer", 0, 24, duration);
-      });
-    </script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const duration = 700;
+              animateValue("counter-founded", 0, 1995, duration);
+              animateValue("counter-members", 0, 240, duration);
+              animateValue("counter-prayer", 0, 24, duration);
+            });
+          </script>
+
   </section>
 
 
 
   <!-- Welcome Section -->
-  <section class="container my-5">
+  <section class="container my-5 fade-in-element ">
     <div class="mb-4 text-md-start">
       <h1 class="fw-bold">Welcome to Our Church</h1>
     </div>
 
     <!-- Paragraph -->
-    <div class="mb-5">
+    <div class="mb-5 ">
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -153,7 +152,7 @@
 
 
   <!-- Events Section -->
-  <section class="Home-events">
+  <section class="Home-events fade-in-element ">
     <div class="container py-5">
       <div class="text-center mb-4">
         <h2 class="fw-bold">Our Church Events</h2>
@@ -232,7 +231,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="home-contact">
+  <section class="home-contact ">
     <div class="container py-5">
       <div class="row align-items-center gx-lg-5">
 
@@ -327,6 +326,116 @@
 
 
 
+
+  <!-- === LOGO LOADER (Bounce Animation) === -->
+  <div id="loader" aria-hidden="true">
+    <img src="Assets/Logo.webp" alt="Logo" class="loader-logo" />
+  </div>
+
+  <style>
+    /* Fullscreen overlay */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      /* change if needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+
+    .page-loaded #loader {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    html.loader-lock,
+    body.loader-lock {
+      overflow: hidden;
+    }
+
+    /* Logo bounce animation */
+    .loader-logo {
+      width: 120px;
+      height: auto;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-25px);
+      }
+
+      60% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loader-logo {
+        animation: none;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('loader-lock');
+      document.body.classList.add('loader-lock');
+
+      const MIN_VISIBLE_MS = 600;
+      const FALLBACK_HIDE_MS = 4000;
+      const startedAt = Date.now();
+
+      function hideLoader() {
+        const elapsed = Date.now() - startedAt;
+        const delay = Math.max(0, MIN_VISIBLE_MS - elapsed);
+
+        setTimeout(() => {
+          document.body.classList.add('page-loaded');
+          setTimeout(() => {
+            document.documentElement.classList.remove('loader-lock');
+            document.body.classList.remove('loader-lock');
+            const el = document.getElementById('loader');
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+          }, 450);
+        }, delay);
+      }
+
+      window.addEventListener('load', hideLoader);
+      setTimeout(hideLoader, FALLBACK_HIDE_MS);
+    })();
+  </script>
+  <!-- === /LOGO LOADER === -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".fade-in-element");
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            obs.unobserve(entry.target); // run only once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 
 
 
