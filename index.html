@@ -30,7 +30,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
           <li class="nav-item ms-2"><a class="nav-link" href="/Pages/about.html">About</a></li>
-          <li class="nav-item ms-2"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item ms-2"><a class="nav-link" href="/Pages/events.html">Events</a></li>
           <li class="nav-item ms-2"><a class="nav-link" href="#">Videos</a></li>
           <li class="nav-item ms-2"><a class="nav-link" href="#">Gallery</a></li>
         </ul>
@@ -68,7 +68,8 @@
           </div>
 
           <!-- Stats -->
-          <div class="stats d-flex gap-4 flex-wrap justify-content-center text-center">
+          <div
+            class="stats d-flex gap-4 flex-wrap justify-content-start justify-content-md-center text-md-center text-start">
             <div>
               <h4 id="counter-founded">0</h4>
               <p class="mb-0">Founded</p>
@@ -82,6 +83,7 @@
               <p class="mb-0">Prayer Support</p>
             </div>
           </div>
+
 
           <script>
             function animateValue(id, start, end, duration) {
@@ -100,12 +102,13 @@
             }
 
             document.addEventListener('DOMContentLoaded', () => {
-              const duration = 700;
+              const duration = 3000; // ⏳ 3 seconds
               animateValue("counter-founded", 0, 1995, duration);
               animateValue("counter-members", 0, 240, duration);
               animateValue("counter-prayer", 0, 24, duration);
             });
           </script>
+
 
   </section>
 
