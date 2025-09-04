@@ -30,19 +30,18 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
                     <li class="nav-item ms-2"><a class="nav-link " href="/Pages/about.html">About</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link active" href="/Pages/events.html">Events</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link " href="/Pages/events.html">Events</a></li>
                     <li class="nav-item ms-2"><a class="nav-link " href="/Pages/videos.html">Videos</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/gallery.html">Gallery</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link active " href="/Pages/gallery.html">Gallery</a></li>
                 </ul>
 
             </div>
         </div>
     </nav>
 
-
     <!-- Banner Section -->
     <section class="position-relative text-white"
-        style="height: 50vh; background: url('/Assets/Events.jpg') no-repeat center center / cover;">
+        style="height: 50vh; background: url('/Assets/Gallery.jpg') no-repeat center center / cover;">
         <!-- Dark overlay -->
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5); z-index: 1;">
         </div>
@@ -52,7 +51,7 @@
             <!-- ===== Typing Quote (No Cursor) ===== -->
             <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
                 <h1 class="fw-medium display-5 mb-0 qoutes">
-                    "Faith, fellowship, and community<br>through every event."
+                    “Moments of faith and <br> fellowship.”
                 </h1>
             </div>
 
@@ -108,195 +107,87 @@
             <!-- About Text Absolutely Positioned to Right Edge -->
             <div class="position-absolute bottom-0" style="right: 10px;">
                 <p class="p">
-                    <a href="#about" class="btn btn-link text-white fw-bold fs-4 text-decoration-none">Events</a>
+                    <a href="#about" class="btn btn-link text-white fw-bold fs-4 text-decoration-none">Gallery</a>
                 </p>
             </div>
         </div>
-    </section>
+    </section><br>
 
 
 
-    <section class="py-5">
-        <div class="container">
-            <!-- Header -->
-            <div class=" mb-5">
-                <h2 class="fw-bold">Our Church Events</h2>
-                <p class="fw-semibold">Pastor Robin C Roy will be attending all these meetings</p>
+    <style>
+        .gallery-section {
+            padding: 60px 0;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 95%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 15px;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        .custom-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 0px;
+            /* 🔧 Reduced vertical space */
+        }
+
+
+        .w-60 {
+            flex: 0 0 60%;
+        }
+
+        .w-40 {
+            flex: 0 0 40%;
+        }
+
+        @media (max-width: 768px) {
+            .custom-row {
+                flex-direction: column;
+            }
+
+            .w-60,
+            .w-40 {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+
+
+    <!-- Row 1: Left 60%, Right 40% -->
+    <section class="container Gallery">
+        <!-- Row 1: Left 60%, Right 40% -->
+        <div class="custom-row">
+            <div class="gallery-card w-60">
+                <img src="/Assets/Gallery 1.jpg" alt="Gallery 1" class="gallery-img">
             </div>
-
-            <!-- First Cards Grid -->
-            <div class="row g-4 mb-5">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Worship.jpg" class="card-img-top" alt="Gospel Praise & Worship" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Gospel Praise & Worship</h5>
-                            <p class="card-text mb-1">
-                                Starts at 10.30 AM Vineyard Church,<br>
-                                5015 Grove W Blvd 2nd Floor,<br>
-                                Stafford, TX 77477
-                            </p>
-                            <p class="card-text">
-                                We will be live streaming our services on YouTube. Please follow us at Carmel Prayer
-                                Fellowship.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Friday pryr.jpg" class="card-img-top" alt="Every Friday" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Every Friday</h5>
-                            <p class="card-text mb-1">
-                                Evening Prayer at 7.30 PM at 4614 Sundown Court, Missouri City
-                            </p>
-                            <p class="card-text">
-                                Come together to seek God’s presence, share in worship, and lift up one another in
-                                prayer.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Ladies meeting.jpg" class="card-img-top" alt="Ladies Prayer" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Ladies Prayer</h5>
-                            <p class="card-text mb-1">
-                                Every other Saturday at 7.30 PM
-                            </p>
-                            <p class="card-text">
-                                This gathering is a wonderful opportunity to come together in faith, strengthen our
-                                spiritual journey.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Youth.jpg" class="card-img-top" alt="Set Apart Youth" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Set Apart Youth</h5>
-                            <p class="card-text mb-1">
-                                Set Apart Youth is the youth ministry of Carmel Prayer Fellowship,
-                            </p>
-                            <p class="card-text">
-                                Empowering the next generation to live Christ-centered lives and be “set apart” for
-                                God’s purpose.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="gallery-card w-40">
+                <img src="/Assets/Gallery 2.jpg" alt="Gallery 2" class="gallery-img">
             </div>
+        </div>
 
-            <!-- Second Cards Grid (duplicate of the first) -->
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Worship.jpg" class="card-img-top" alt="Gospel Praise & Worship" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Gospel Praise & Worship</h5>
-                            <p class="card-text mb-1">
-                                Starts at 10.30 AM Vineyard Church,<br>
-                                5015 Grove W Blvd 2nd Floor,<br>
-                                Stafford, TX 77477
-                            </p>
-                            <p class="card-text">
-                                We will be live streaming our services on YouTube. Please follow us at Carmel Prayer
-                                Fellowship.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Friday pryr.jpg" class="card-img-top" alt="Every Friday" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Every Friday</h5>
-                            <p class="card-text mb-1">
-                                Evening Prayer at 7.30 PM at 4614 Sundown Court, Missouri City
-                            </p>
-                            <p class="card-text">
-                                Come together to seek God’s presence, share in worship, and lift up one another in
-                                prayer.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Ladies meeting.jpg" class="card-img-top" alt="Ladies Prayer" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Ladies Prayer</h5>
-                            <p class="card-text mb-1">
-                                Every other Saturday at 7.30 PM
-                            </p>
-                            <p class="card-text">
-                                This gathering is a wonderful opportunity to come together in faith, strengthen our
-                                spiritual journey.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="/Assets/Youth.jpg" class="card-img-top" alt="Set Apart Youth" />
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Set Apart Youth</h5>
-                            <p class="card-text mb-1">
-                                Set Apart Youth is the youth ministry of Carmel Prayer Fellowship,
-                            </p>
-                            <p class="card-text">
-                                Empowering the next generation to live Christ-centered lives and be “set apart” for
-                                God’s purpose.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Row 2: Left 40%, Right 60% (no gap above) -->
+        <div class="custom-row">
+            <div class="gallery-card w-40">
+                <img src="/Assets/Gallery 3.jpg" alt="Gallery 3" class="gallery-img">
             </div>
-
+            <div class="gallery-card w-60">
+                <img src="/Assets/97686.jpg" alt="Gallery 4" class="gallery-img">
+            </div>
         </div>
     </section>
 
-    <style>
-        .card {
-            border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            will-change: transform;
-            border-radius: 0.5rem;
-            background-color: #fff;
-        }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-        }
 
-        .card-img-top {
-            height: 180px;
-            width: 100%;
-            object-fit: cover;
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-        }
-    </style>
 
 
 
@@ -311,7 +202,8 @@
                 <!-- Left Column: Mission Text -->
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <p class="mb-0" style="font-size: 1.05rem; color: #000;">
-                        Carmel Prayer Fellowship – A community rooted in Christ, growing in faith, serving in love, and
+                        Carmel Prayer Fellowship – A community rooted in Christ, growing in faith, serving in love,
+                        and
                         sharing the
                         hope of the Gospel.
                     </p>
