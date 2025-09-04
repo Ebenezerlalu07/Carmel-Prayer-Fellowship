@@ -108,12 +108,13 @@ p {
 @media (max-width: 991px) {
     .navbar-collapse {
         background: #fff;
-        padding: 1rem;
-        margin-top: 2rem;
+        margin-top: 20px;
+        animation: normal;
         /* Adds gap between logo and nav links */
         border-radius: 12px;
         flex-direction: column;
         gap: 1.5rem;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     .navbar-collapse .navbar-nav {
