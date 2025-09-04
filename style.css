@@ -21,6 +21,10 @@ h6,
 p {
     font-family: 'Playfair Display', serif;
 }
+html {
+  scroll-behavior:smooth;
+}
+
 
 .qoutes {
     font-family: "Mr Dafoe", cursive;
