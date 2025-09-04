@@ -40,77 +40,125 @@
   </nav>
 
 
-  <!-- Hero Section -->
-  <section class=" fade-in-element hero d-flex flex-column justify-content-end text-white" style="min-height:100vh; padding-top:80px; 
-         background: url('/Assets/Banner.jpg') no-repeat center center/cover; 
-         position: relative; font-family: 'Playfair Display', serif;">
+<section class="fade-in-element hero d-flex flex-column justify-content-end text-white position-relative"
+  style="min-height: 100vh; height: 100vh; padding-top: 80px; font-family: 'Playfair Display', serif; overflow: hidden;">
 
-    <!-- Dark overlay -->
-    <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+  <!-- YouTube Video Background -->
+  <div class="video-background position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; overflow: hidden;">
+    <iframe
+      src="https://www.youtube.com/embed/1AnSHYjQ3tc?autoplay=1&mute=1&loop=1&playlist=1AnSHYjQ3tc&controls=0&modestbranding=1&rel=0&showinfo=0"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+      style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 177.77777778vh; /* 100 * 16/9 to maintain aspect ratio */
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 0;
+        ">
+    </iframe>
+  </div>
 
-    <div class="container position-relative">
-      <div class="hero-content">
-        <p class="fw-bold text-start text-md-start">Welcome to Carmel Prayer Fellowship</p>
-        <h1 class="text-start text-md-start">Rooted in the Gospel, growing in<br> grace, living in love.</h1>
-        <p class="text-start text-md-start">Discover a place where the Gospel leads, and everyone belongs.</p>
+  <!-- Dark overlay -->
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index: 1;"></div>
 
-        <!-- Action row -->
-        <div class="action-row d-flex flex-column flex-md-row justify-content-md-between align-items-md-center mt-4">
+  <!-- Content -->
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="hero-content">
+      <p class="fw-bold text-start text-md-start">Welcome to Carmel Prayer Fellowship</p>
+      <h1 class="text-start text-md-start">Rooted in the Gospel, growing in<br> grace, living in love.</h1>
+      <p class="text-start text-md-start">Discover a place where the Gospel leads, and everyone belongs.</p>
 
-          <!-- Buttons -->
-          <div class="mb-3 mb-md-0 text-start">
-            <a href="#" class="btn rounded-pill me-2"
-              style="background-color:#a71212; border-color:#a71212; color:#fff;">
-              Visit Church
-            </a>
+      <!-- Action row -->
+      <div class="action-row d-flex flex-column flex-md-row justify-content-md-between align-items-md-center mt-4">
 
-            <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
+        <!-- Buttons -->
+        <div class="mb-3 mb-md-0 text-start">
+          <a href="#" class="btn rounded-pill me-2"
+            style="background-color:#a71212; border-color:#a71212; color:#fff;">
+            Visit Church
+          </a>
+
+          <a href="#" class="btn btn-light btn-custom rounded-pill">Watch Live</a>
+        </div>
+
+        <!-- Stats -->
+        <div
+          class="stats d-flex gap-4 flex-wrap justify-content-start justify-content-md-center text-md-center text-start">
+          <div>
+            <h4 id="counter-founded">0</h4>
+            <p class="mb-0">Founded</p>
           </div>
-
-          <!-- Stats -->
-          <div
-            class="stats d-flex gap-4 flex-wrap justify-content-start justify-content-md-center text-md-center text-start">
-            <div>
-              <h4 id="counter-founded">0</h4>
-              <p class="mb-0">Founded</p>
-            </div>
-            <div>
-              <h4 id="counter-members">0</h4>
-              <p class="mb-0">Members</p>
-            </div>
-            <div>
-              <h4><span id="counter-prayer">0</span>/7</h4>
-              <p class="mb-0">Prayer Support</p>
-            </div>
+          <div>
+            <h4 id="counter-members">0</h4>
+            <p class="mb-0">Members</p>
           </div>
+          <div>
+            <h4><span id="counter-prayer">0</span>/7</h4>
+            <p class="mb-0">Prayer Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        obj.textContent = value;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const duration = 3000; // ⏳ 3 seconds
+      animateValue("counter-founded", 0, 1995, duration);
+      animateValue("counter-members", 0, 240, duration);
+      animateValue("counter-prayer", 0, 24, duration);
+    });
+  </script>
+</section>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .video-background iframe {
+    /* fallback for aspect ratio */
+    min-width: 100vw;
+    min-height: 56.25vw; /* 100vw * 9/16 */
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .video-background iframe {
+      width: 177.77777778vh; /* 100 * 16/9 */
+      height: 100vh;
+    }
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .video-background iframe {
+      width: 100vw;
+      height: 56.25vw; /* 100vw * 9/16 */
+    }
+  }
+</style>
 
 
-          <script>
-            function animateValue(id, start, end, duration) {
-              const obj = document.getElementById(id);
-              let startTimestamp = null;
-              const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const value = Math.floor(progress * (end - start) + start);
-                obj.textContent = value;
-                if (progress < 1) {
-                  window.requestAnimationFrame(step);
-                }
-              };
-              window.requestAnimationFrame(step);
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-              const duration = 3000; // ⏳ 3 seconds
-              animateValue("counter-founded", 0, 1995, duration);
-              animateValue("counter-members", 0, 240, duration);
-              animateValue("counter-prayer", 0, 24, duration);
-            });
-          </script>
-
-
-  </section>
 
 
 
