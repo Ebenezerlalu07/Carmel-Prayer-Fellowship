@@ -21,8 +21,13 @@ h6,
 p {
     font-family: 'Playfair Display', serif;
 }
+
+.paragrah {
+    font-family: 'Playfair Display', serif;
+}
+
 html {
-  scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 

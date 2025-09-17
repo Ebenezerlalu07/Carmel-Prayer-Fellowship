@@ -33,6 +33,7 @@
           <li class="nav-item ms-2"><a class="nav-link" href="/Pages/events.html">Events</a></li>
           <li class="nav-item ms-2"><a class="nav-link" href="/Pages/videos.html">Videos</a></li>
           <li class="nav-item ms-2"><a class="nav-link" href="/Pages/gallery.html">Gallery</a></li>
+          <li class="nav-item ms-2"><a class="nav-link" href="/Pages/contact.html">Contact</a></li>
         </ul>
 
       </div>
@@ -80,7 +81,7 @@
 
           <!-- Buttons -->
           <div class="mb-3 mb-md-0 text-start">
-            <a href="/Pages/about.html" class="btn rounded-pill me-2"
+            <a href="Pages/contact.html" class="btn rounded-pill me-2"
               style="background-color:#a71212; border-color:#a71212; color:#fff;">
               Visit Church
             </a>
@@ -95,10 +96,10 @@
               <h4 id="counter-founded">0</h4>
               <p class="mb-0">Founded</p>
             </div>
-            <div>
+            <!-- <div>
               <h4 id="counter-members">0</h4>
               <p class="mb-0">Members</p>
-            </div>
+            </div> -->
             <div>
               <h4><span id="counter-prayer">0</span>/7</h4>
               <p class="mb-0">Prayer Support</p>
@@ -126,8 +127,8 @@
 
       document.addEventListener('DOMContentLoaded', () => {
         const duration = 3000; // ⏳ 3 seconds
-        animateValue("counter-founded", 0, 1995, duration);
-        animateValue("counter-members", 0, 240, duration);
+        animateValue("counter-founded", 0, 2018, duration);
+        // animateValue("counter-members", 0, 240, duration);
         animateValue("counter-prayer", 0, 24, duration);
       });
     </script>
@@ -179,13 +180,25 @@
     <!-- Paragraph -->
     <div class="mb-5 ">
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.
+        Good morning, and a warm welcome to Carmel Prayer Fellowship! Whether it's your first visit or you've been with
+        us for years, we're so happy to have you here with us.<br><br>
+
+        Our story began back in 2013 with a Spirit-led prayer gathering in someone's home. Fast forward to May 2018, and
+        that little prayer meeting blossomed into a dedicated house church with twelve members, all guided by the Holy
+        Spirit. In 2019, we welcomed our founding pastor, Robin C. Roy, to help nurture our growth in faith, prayer, and
+        service. Today, we're a close-knit community focused on worship and dedicated to assisting lives and families to
+        experience the freedom of God's love.<br><br>
+
+        We come together to pray for the deliverance of generations from burdens that may have weighed them down, to
+        encourage one another in love, and to equip everyone to serve. We want to express the power of Pentecost in our
+        lives, believing that the Holy Spirit empowers us to be bold witnesses and ignites a passion for prayer and
+        service within us. We're eagerly praying and looking forward to the next wave of revival in our nation emerging
+        from vibrant communities like ours, inspired by the Holy Spirit as we engage in prayer and service.<br><br>
+
+        Our vision is to grow into a multicultural, multiethnic church that beautifully represents the fullness of God's
+        family. You'll see this in our warm welcomes, uplifting worship, and the incredible stories we share.<br><br>
+
+        We'd love for you to visit our church and become part of our faith family. We can't wait to see you!
       </p>
     </div>
 
@@ -225,15 +238,17 @@
             <div class="position-relative">
               <img src="/Assets/Worship.jpg" class="card-img-top event-img" alt="Gospel Praise & Worship">
               <!-- YouTube Icon Overlay -->
-              <span class="youtube-icon">
-                <i class="bi bi-youtube"></i>
-              </span>
+              <a href="https://www.youtube.com/@CarmelPrayerFellowship">
+                <span class="youtube-icon">
+                  <i class="bi bi-youtube"></i>
+                </span></a>
             </div>
             <div class="card-body">
               <h5 class="card-title">Gospel Praise & Worship</h5>
               <p class="card-text">Starts at 10.30 AM Vineyard Church, 5015 Grove W Blvd 2nd Floor, Stafford, TX 77477
               </p>
-              <p class="card-text">We will be live streaming our services on YouTube. Please follow us at Carmel Prayer
+              <p class="card-text">We will be live streaming our services on YouTube. Please follow us at Carmel
+                Prayer
                 Fellowship</p>
             </div>
           </div>
@@ -339,7 +354,7 @@
             <h4 class="mb-2" style="color: #a71212; font-weight: 700; font-size: 1.5rem;">Carmel Prayer Fellowship</h4>
             <p style="font-size: 1.1rem;">
               4614 Sundown Court, Missouri City, Texas 77459,<br>
-              United States, <a href="tel:+13464337294" style="text-decoration: underline; color: inherit;">(346)
+              United States, <a style=" color: inherit;">(346)
                 433-7294</a>
             </p>
           </div>
@@ -374,7 +389,7 @@
           <div>
             <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.25rem;"></i></a>
             <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.25rem;"></i></a>
-            <a href="#" class="text-white"><i class="bi bi-youtube" style="font-size: 1.25rem;"></i></a>
+            <a href="https://www.youtube.com/@CarmelPrayerFellowship" class="text-white"><i class="bi bi-youtube" style="font-size: 1.25rem;"></i></a>
           </div>
         </div>
 
