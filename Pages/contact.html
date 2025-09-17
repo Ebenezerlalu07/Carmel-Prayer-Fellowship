@@ -29,78 +29,136 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link " href="/Pages/about.html">About</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link " href="/Pages/events.html">Events</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link active" href="/Pages/videos.html">Videos</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/about.html">About</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/events.html">Events</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/videos.html">Videos</a></li>
                     <li class="nav-item ms-2"><a class="nav-link" href="/Pages/gallery.html">Gallery</a></li>
-                    <li class="nav-item ms-2"><a class="nav-link" href="/Pages/contact.html">Contact</a></li>
+                    <li class="nav-item ms-2"><a class="nav-link active" href="/Pages/contact.html">Contact</a></li>
                 </ul>
 
             </div>
         </div>
     </nav><br><br>
 
+    <!-- Banner Section -->
+    <section class="position-relative text-white"
+        style="height: 50vh; background: url('/Assets/Contact.jpg') no-repeat center center / cover;">
+        <!-- Dark overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5); z-index: 1;">
+        </div>
 
-    <div class="my-4">
-        <section> <a href="https://www.youtube.com/@CarmelPrayerFellowship">
-                <div class="container py-5">
-                    <div class="position-relative overflow-hidden rounded-4"
-                        style="height: 600px; border-radius: 1rem;">
-                        <!-- Background Image -->
-                        <img src="/Assets/Live.jpg" alt="Worship Live" class="w-100 h-100 object-fit-cover"
-                            style="object-position: center; border-radius: 1rem;">
+        <!-- Banner Content -->
+        <div class="container-fluid h-100 position-relative z-2">
+            <!-- ===== Typing Quote (No Cursor) ===== -->
+            <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
+                <h1 class="fw-medium display-5 mb-0 qoutes">
+                    Connection, care, and support through <br> every conversation
+                </h1>
+            </div>
 
-                        <!-- Overlay Text -->
-                        <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3">
-                            <h1 class="fw-bold mb-1" style="font-size: 5rem;">Worship Live</h1>
-                            <h4 class="fw-semibold mb-1" style="font-size: 1rem;">Every Sunday 10Am</h4>
-                            <img src="/Assets/youtube (2).png" alt="YouTube" style="width: 50px; height: 50px;">
+            <style>
+                /* Allow wrapping for multi-line typing */
+                .qoutes {
+                    white-space: normal;
+                }
+
+                /* container span for typed text */
+                .qoutes .typing-text {
+                    display: inline-block;
+                }
+            </style>
+
+            <script>
+                (function () {
+                    const el = document.querySelector('.qoutes');
+                    if (!el) return;
+
+                    // Convert <br> into "\n" markers
+                    const raw = el.innerHTML.replace(/<br\s*\/?>/gi, '\n').trim();
+
+                    // Clear original content
+                    el.innerHTML = '';
+                    const textSpan = document.createElement('span');
+                    textSpan.className = 'typing-text';
+                    el.appendChild(textSpan);
+
+                    // Typing animation
+                    const chars = Array.from(raw);
+                    const speed = 40;  // ms per character
+                    const startDelay = 250;
+                    let i = 0;
+
+                    function typeNext() {
+                        if (i >= chars.length) return;
+                        const ch = chars[i++];
+                        if (ch === '\n') {
+                            textSpan.appendChild(document.createElement('br'));
+                        } else {
+                            textSpan.appendChild(document.createTextNode(ch));
+                        }
+                        setTimeout(typeNext, speed);
+                    }
+
+                    setTimeout(typeNext, startDelay);
+                })();
+            </script>
+            <!-- ===== /Typing Quote ===== -->
+
+
+            <!-- About Text Absolutely Positioned to Right Edge -->
+            <div class="position-absolute bottom-0" style="right: 10px;">
+                <p class="p">
+                    <a href="#about" class="btn btn-link text-white fw-bold fs-4 text-decoration-none">Contact</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Address Section -->
+    <section class="contact-address py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg border-0 rounded-4 p-4 p-lg-5">
+                        <div class="row g-4 align-items-center">
+
+                            <!-- Left: Address Info -->
+                            <div class="col-lg-6">
+                                <h3 class="fw-bold mb-3" style="font-size: 1.8rem; color: #333">
+                                    Carmel Prayer Fellowship
+                                </h3>
+                                <p class="mb-1 fw-semibold" style="font-size: 1.1rem; color: #333;">
+                                    Vineyard Church
+                                </p>
+                                <p class="text-muted mb-3" style="font-size: 1rem;">
+                                    5015 Grove W Blvd, 2nd Floor <br>
+                                    Stafford, TX 77477
+                                </p>
+
+                                <a href="https://maps.google.com/?q=5015+Grove+W+Blvd+2nd+Floor,+Stafford,+TX+77477"
+                                    target="_blank" class="btn btn-outline-danger rounded-pill fw-bold px-4">
+                                    View on Google Maps
+                                </a>
+                            </div>
+
+                            <!-- Right: Map -->
+                            <div class="col-lg-6">
+                                <div class="ratio ratio-16x9 shadow-sm">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=5015+Grove+W+Blvd,+2nd+Floor,+Stafford,+TX+77477&output=embed"
+                                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                        style="border:0; width:100%; height:100%;">
+                                    </iframe>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </a>
-        </section>
-    </div><br>
-
-    <style>
-        .worship-container {
-            border-radius: 1rem;
-            /* desktop curve */
-        }
-
-        .worship-image {
-            border-radius: 2rem;
-            /* desktop curve for image */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 576px) {
-            .worship-container {
-                border-radius: 0.3rem;
-                /* reduce curve on small devices */
-            }
-
-            .worship-image {
-                border-radius: 0.3rem;
-                /* match container curve */
-            }
-
-            .worship-title {
-                font-size: 2.5rem !important;
-                /* override inline style */
-            }
-
-            .worship-subtitle {
-                font-size: 1.2rem !important;
-                /* override inline style */
-            }
-
-            .youtube-icon {
-                width: 35px !important;
-                height: 35px !important;
-            }
-        }
-    </style>
+            </div>
+        </div>
+    </section>
 
 
 
