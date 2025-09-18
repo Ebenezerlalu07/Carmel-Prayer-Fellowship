@@ -115,50 +115,65 @@
     </section>
 
 
-    <!-- Address Section -->
-    <section class="contact-address py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card shadow-lg border-0 rounded-4 p-4 p-lg-5">
-                        <div class="row g-4 align-items-center">
+    <!-- Contact Section -->
+    <section class="home-contact">
+        <div class="container py-5">
+            <div class="row align-items-center gx-lg-5">
 
-                            <!-- Left: Address Info -->
-                            <div class="col-lg-6">
-                                <h3 class="fw-bold mb-3" style="font-size: 1.8rem; color: #333">
-                                    Carmel Prayer Fellowship
-                                </h3>
-                                <p class="mb-1 fw-semibold" style="font-size: 1.1rem; color: #333;">
-                                    Vineyard Church
-                                </p>
-                                <p class="text-muted mb-3" style="font-size: 1rem;">
-                                    5015 Grove W Blvd, 2nd Floor <br>
-                                    Stafford, TX 77477
-                                </p>
+                <!-- Left column: form (wider column using col-lg-7) -->
+                <div class="col-lg-7">
+                    <h2 class="mb-4 fw-bold" style="font-size: 2.2rem;">Get in Contact!</h2>
 
-                                <a href="https://maps.google.com/?q=5015+Grove+W+Blvd+2nd+Floor,+Stafford,+TX+77477"
-                                    target="_blank" class="btn btn-outline-danger rounded-pill fw-bold px-4">
-                                    View on Google Maps
-                                </a>
-                            </div>
+                    <!-- Form -->
+                    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
 
-                            <!-- Right: Map -->
-                            <div class="col-lg-6">
-                                <div class="ratio ratio-16x9 shadow-sm">
-                                    <iframe
-                                        src="https://www.google.com/maps?q=5015+Grove+W+Blvd,+2nd+Floor,+Stafford,+TX+77477&output=embed"
-                                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                        style="border:0; width:100%; height:100%;">
-                                    </iframe>
-                                </div>
-                            </div>
-
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label mb-1" style="font-size: 1rem;">Name</label>
+                            <input type="text" id="name" name="Name" class="form-control border-0 border-bottom"
+                                style="border-color: #ccc; border-radius: 0; font-size: 1rem; padding: 0.1rem 0.5rem 0.4rem;">
                         </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label mb-1" style="font-size: 1rem;">Email<span
+                                    class="text-danger">*</span></label>
+                            <input type="email" id="email" name="Email" class="form-control border-0 border-bottom"
+                                style="border-color: #ccc; border-radius: 0; font-size: 1rem; padding: 0.1rem 0.5rem 0.4rem;"
+                                required>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label mb-1" style="font-size: 1rem;">Message</label>
+                            <textarea id="message" name="Message" rows="3" class="form-control border-0 border-bottom"
+                                style="border-color: #ccc; border-radius: 0; font-size: 1rem; padding: 0.1rem 0.5rem 0.4rem;"></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="btn w-100"
+                            style="background-color: #a71212; border-radius: 30px; color: white; font-weight: 700; font-size: 1.1rem; padding: 10px 0;">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right column: map (narrower col-lg-5) -->
+                <div class="col-lg-5 d-flex align-items-center mt-5 mt-lg-0">
+                    <div class="ratio ratio-4x3 w-100 shadow-sm">
+                        <iframe
+                            src="https://www.google.com/maps?q=5015+Grove+W+Blvd,+2nd+Floor,+Stafford,+TX+77477&output=embed"
+                            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            style="border:0; width:100%; height:100%;">
+                        </iframe>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+
+
 
 
 
@@ -196,7 +211,8 @@
                                 style="font-size: 1.25rem;"></i></a>
                         <a href="#" class="text-white me-3"><i class="bi bi-facebook"
                                 style="font-size: 1.25rem;"></i></a>
-                        <a href="https://www.youtube.com/@CarmelPrayerFellowship" class="text-white"><i class="bi bi-youtube" style="font-size: 1.25rem;"></i></a>
+                        <a href="https://www.youtube.com/@CarmelPrayerFellowship" class="text-white"><i
+                                class="bi bi-youtube" style="font-size: 1.25rem;"></i></a>
                     </div>
                 </div>
 
