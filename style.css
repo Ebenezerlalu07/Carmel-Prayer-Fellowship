@@ -25,6 +25,9 @@ p {
 .paragrah {
     font-family: 'Playfair Display', serif;
 }
+.text{
+    text-decoration: none;
+}
 
 
 html {
