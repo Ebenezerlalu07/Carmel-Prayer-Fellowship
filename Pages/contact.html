@@ -125,7 +125,7 @@
                     <h2 class="mb-4 fw-bold" style="font-size: 2.2rem;">Get in Contact!</h2>
 
                     <!-- Form -->
-                    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+                    <form onsubmit="sendMail(event)">
 
                         <!-- Name -->
                         <div class="mb-3">
@@ -156,6 +156,25 @@
                             Submit
                         </button>
                     </form>
+
+                    <script>
+                        function sendMail(event) {
+                            event.preventDefault(); // stop normal form action
+
+                            const name = document.getElementById("name").value;
+                            const email = document.getElementById("email").value;
+                            const message = document.getElementById("message").value;
+
+                            const subject = encodeURIComponent("New message from " + name);
+                            const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+
+                            // Gmail compose link
+                            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mail@gmail.com&su=${subject}&body=${body}`;
+
+                            window.open(gmailUrl, "_blank"); // open Gmail in new tab
+                        }
+                    </script>
+
                 </div>
 
                 <!-- Right column: map (narrower col-lg-5) -->
@@ -172,6 +191,26 @@
             </div>
         </div>
     </section>
+
+    <div class="container text-center">
+        <img src="/Assets/scanner.jpg" class="img-fluid mx-auto d-block custom-img" alt="Responsive Image">
+    </div>
+
+    <style>
+        /* Default (mobile/tablet) – image full responsive */
+        .custom-img {
+            max-width: 100%;
+        }
+
+        /* On desktop (≥992px) – reduce size */
+        @media (min-width: 992px) {
+            .custom-img {
+                max-width: 40%;
+                /* adjust 40%, 35%, etc. as needed */
+            }
+        }
+    </style>
+
 
 
 
